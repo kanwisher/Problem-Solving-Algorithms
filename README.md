@@ -1,5 +1,5 @@
 # Problem-Solving-Algorithms
-
+```javascript
 
 Create a function that takes a string and returns a string in which each character is repeated once.
 Examples
@@ -8,6 +8,7 @@ Examples
 "1234!_ " => "11223344!!__  "
 
 My solution:
+
 function doubleChar(str) {
   let final = "";
    for(let i = 0; i < str.length; i++){
@@ -21,3 +22,4 @@ Alternative solution:
 function doubleChar(str) {
   return str.split("").map((x) =>  x + x).join("");
 }
+```
