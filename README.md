@@ -92,4 +92,23 @@ My solution:
 function silenceTrump(str) {
   return str.replace(/[aeiou]/ig, '');
 }
+
+
+
+Filter Strings From Array
+Created by Matt in JavaScripton February 12th 2017
+arraysformattingloops
+Create a function that takes an array of non-negative numbers and strings and returns a new array without the strings.
+Rules
+Filter out all strings.
+Return only numbers.
+Example
+[1, 2, "a", "b"] => [1, 2]
+[1, "a", "b", 0, 15] => [1, 0, 15]
+[1, 2, "aasf", "1", "123", 123] => [1, 2, 123]
+Gotchas
+Zero is a non-negative number.
+
+
+My solution:
 ```
