@@ -196,4 +196,39 @@ function validateEmail(str) {
   return /\w+[@]\w+[.]\w+/g.test(str);
 }
 
+Find The Minimum, Maximum, Length And Average Values
+Created by Matt in JavaScripton February 11th 2017
+arraysvalidation
+Create a function that takes an array of numbers and returns the  following statistics:
+Minimum Value
+Maximum Value
+Sequence Length
+Average Value
+Examples
+[6, 9, 15, -2, 92, 11] => [-2, 92, 6, 21.833333333333332]
+[30, 43, 20, 92, 3, 74] => [3, 92, 6, 43.666666666666664]
+[4.54, 8.32, 5.20] => [4.54, 8.32, 3, 6.02]
+Gotchas
+No gotchas. You don't even have to round the average.
+
+My solution:
+
+function minMaxLengthAverage(arr) {
+  let solution = [];
+solution.push(Math.min(...arr));
+solution.push(Math.max(...arr));
+solution.push(arr.length);
+solution.push(arr.reduce((a, b)=>a+b) / arr.length);
+return solution;
+}
+
+Alternate solution:
+
+function minMaxLengthAverage(arr) {
+ return [
+ Math.min(...arr),
+ Math.max(...arr),
+ arr.length,
+ arr.reduce((a,b)=>a+b) /arr.length
+ ]
 ```
