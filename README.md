@@ -124,4 +124,24 @@ InstructionsCodeResourcesSolutionsDiscussion
 function filterArray(arr) {
   return arr.filter(n => typeof n === 'number');
 }
+
+
+Create a function that takes a string as an argument and converts the first character of each word to uppercase. Return the newly formatted string.
+Examples
+
+"This is a title" => "This Is A Title"
+"capitalize every word" => "Capitalize Every Word"
+"I Like Pizza" => "I Like Pizza"
+"PIZZA PIZZA PIZZA" => "PIZZA PIZZA PIZZA"
+Gotchas
+
+Don't worry about gotchas, you can expect a valid string for each lab test.
+
+
+My Solution:
+
+function makeTitle(str) {
+return str.split(" ").map((item) => item[0].toUpperCase() + item.slice(1)).join(" ");
+
+}
 ```
