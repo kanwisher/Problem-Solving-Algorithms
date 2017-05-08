@@ -111,4 +111,17 @@ Zero is a non-negative number.
 
 
 My solution:
+
+function filterArray(arr) {
+  return arr.filter(num => Number.isInteger(num));
+}
+
+
+Alternate:
+
+
+InstructionsCodeResourcesSolutionsDiscussion
+function filterArray(arr) {
+  return arr.filter(n => typeof n === 'number');
+}
 ```
