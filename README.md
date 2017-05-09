@@ -251,5 +251,29 @@ Gotchas
 Remember to return true if there aren't any x's or o's.
 Must be case insensitive.
 
-My solution:
+My solution: (oooh this is ugly)
+
+function XO(str) {
+  console.log(str);
+  let xCount = str.toLowerCase()
+    .split("")
+    .filter((letter)=> letter === "x")
+    .join("");
+  
+  let oCount = str.toLowerCase()
+    .split("")
+    .filter((letter)=> letter === "o")
+    .join("");
+  
+  console.log(xCount.length);
+	console.log(oCount.length);
+  
+  if(xCount.length === 0 && oCount.length === 0){
+    return true;
+  } else if (xCount.length === oCount.length){
+    return true;
+  }else {
+    return false;
+  }
+}
 ```
