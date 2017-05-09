@@ -231,4 +231,25 @@ function minMaxLengthAverage(arr) {
  arr.length,
  arr.reduce((a,b)=>a+b) /arr.length
  ]
+ 
+ 
+ X's And O's
+Created by Matt in JavaScripton February 13th 2017
+conditionssortingstrings
+Create a function that takes a string, checks if it has the same number of 'x's and 'o's and returns either true or false.
+Rules
+Return a boolean value (true or false).
+The string can contain any character.
+When no x or o is in the string, return true.
+Examples
+"ooxx" => true
+"xooxx" => false
+"ooxXm" => true (case insensitive)
+"zpzpzpp" => true (returns true if no x and o)
+"zzoo" => false
+Gotchas
+Remember to return true if there aren't any x's or o's.
+Must be case insensitive.
+
+My solution:
 ```
