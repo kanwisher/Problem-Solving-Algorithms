@@ -313,4 +313,25 @@ alternate solution:
 function capMe(arr) {
 	return arr.map(x => x = x[0].toString().toUpperCase() + x.substring(1).toLowerCase());
 }
+
+Positive Count / Negative Sum
+Created by Matt in JavaScripton February 12th 2017
+completearraysconditions
+Create a function that takes an array of positive and negative numbers. Return an array where the first element is the count of positive numbers and the second element is the sum of negative numbers.
+Examples
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15] => [10, -65]
+[92, 6, 73, -77, 81, -90, 99, 8, -85, 34] => [7, -252]
+[91, -4, 80, -73, -28] => [2, -105]
+Gotchas
+If the input array is empty or null, return an empty array
+
+My solution:
+
+function countPosSumNeg(nums) {
+ 	if(!nums || !nums.length) return [];
+  posTotal = nums.filter((num) => num >= 0).length;
+  negTotal = nums.filter((num) => num < 0).reduce((total, nim) => total += nim);
+  return [posTotal, negTotal];
+
+}
 ```
