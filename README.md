@@ -334,4 +334,38 @@ function countPosSumNeg(nums) {
   return [posTotal, negTotal];
 
 }
+
+Return The Middle Character(s) In A String
+Created by Matt in JavaScripton February 12th 2017
+formattingmathstrings
+Create a function that takes a string and returns the middle character(s). If the word's length is odd, return the middle character. If the word's length is even, return the middle two characters.
+Examples
+"test" => "es"
+"testing" => "t"
+"middle" => "dd"
+"A" => "A"
+Gotchas
+No gotchas. All test cases contain a single word (as a string).
+
+My solution:
+function getMiddle(str) {
+  let firstLetter = str.length / 2
+  if(str.length % 2 === 0){    
+    return str.substring(firstLetter - 1, firstLetter + 1);
+  }else{
+    return str.charAt(firstLetter);
+  }
+}
+
+Alternate solution:
+
+function getMiddle(str) {
+
+  if(str.length % 2){    
+    return str.charAt((str.length-1) / 2);
+  }else{
+    return str.substr((str.length - 2) / 2, 2); //substr() is more in line with what I needed!
+  }
+}
+
 ```
