@@ -285,4 +285,32 @@ function XO(str) {
   let o = str.toLowerCase().split('').filter(x => x === 'o').length;
   return x === o;
 }
+
+Capitalize The Names
+Created by Matt in JavaScripton February 18th 2017
+arraysformattingloops
+Create a function that takes an array of names and returns an array with the first letter capitalized.
+Rules
+Return an array.
+Don't change the order of the original array.
+Examples
+['mavis', 'senaida', 'letty'] => ['Mavis', 'Senaida', 'Letty']
+['samuel', 'MABELLE', 'letitia', 'meridith'] => ['Samuel', 'Mabelle', 'Letitia', 'Meridith']
+['Slyvia', 'Kristal', 'Sharilyn', 'Calista'] => ['Slyvia', 'Kristal', 'Sharilyn', 'Calista']
+
+My solution:
+
+function capMe(arr) {
+	return arr.map(function (item) {
+                 let splitArray = item.toLowerCase().split('');
+  		 splitArray[0] = splitArray[0].toUpperCase();
+  		 return splitArray.join('')
+  });
+}
+
+alternate solution:
+
+function capMe(arr) {
+	return arr.map(x => x = x[0].toString().toUpperCase() + x.substring(1).toLowerCase());
+}
 ```
