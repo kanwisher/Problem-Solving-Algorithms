@@ -400,4 +400,10 @@ Examples
 Gotchas
 No gotchas. You can expect an integer ranging from 0 to 10000.
 
+My solution: (after a few hiccups!);
+
+function mean(arr) {
+  return parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(2));
+}
+
 ```
