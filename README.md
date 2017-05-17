@@ -386,5 +386,18 @@ function isPrime(num){
  return true;
 }
   
+  Calculate The Mean Average
+Created by Matt in JavaScripton February 12th 2017
+math
+Create a function that takes an array of numbers and returns the mean average (fixed to two decimal places).
+Rules
+Return mean average.
+Round to two decimal places.
+Examples
+[1, 0, 4, 5, 2, 4, 1, 2, 3, 3, 3] => 2.54
+[2, 3, 2, 3] => 2.50
+[3, 3, 3, 3, 3] => 3.00
+Gotchas
+No gotchas. You can expect an integer ranging from 0 to 10000.
 
 ```
