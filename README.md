@@ -424,4 +424,24 @@ My solution: (struggled with eloquent solution)
 function formatPhoneNumber(numbers) {
   return numbers.join('').replace(/(...)(...)(....)/, '($1) $2-$3');
 }
+
+Return The Sum Of The Two Smallest Numbers
+Created by Matt in JavaScripton February 14th 2017
+arraysmath
+Create a function that takes an array of numbers and returns the sum of the two lowest positive integers. No floats or empty arrays will be used in any of the test cases.
+Examples
+[19, 5, 42, 2, 77] => 7
+[10, 343445353, 3453445, 3453545353453] => 3453455
+[2, 9, 6, -1] => 8
+[879, 953, 694, -847, 342, 221, -91, -723, 791, -587] => 563
+[3683, 2902, 3951, -475, 1617, -2385] => 4519
+Gotchas
+Don't count negative integers.
+
+my solution:
+
+function sumTwoSmallestNums(arr) {
+  let sortedArray =  arr.filter((index) => index >= 0).sort((a,b) => a - b);
+  return sortedArray[0] + sortedArray[1];
+}
 ```
