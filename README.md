@@ -444,4 +444,30 @@ function sumTwoSmallestNums(arr) {
   let sortedArray =  arr.filter((index) => index >= 0).sort((a,b) => a - b);
   return sortedArray[0] + sortedArray[1];
 }
+
+
+Return The Objects Keys And Values
+Created by Matt in JavaScripton February 13th 2017
+formattingobjects
+Create a function that takes an object and returns the keys and values as separate arrays.
+Examples
+{a: 1, b: 2, c: 3} => [["a", "b", "c"], [1, 2, 3]]
+{a: "Apple", b: "Microsoft", c: "Google"} => [["a", "b", "c"], ["Apple", "Microsoft", "Google"]]
+{key1: true, key2: false, key3: undefined} => [["key1", "key2", "key3"], [true, false, undefined]]
+Gotchas
+No gotchas. Expect all test cases to contain valid objects.
+
+My solution:
+
+function keysAndValues(obj) {
+  let keyArray = [];
+  let propertyArray = [];
+  for(prop in obj){
+    keyArray.push(prop)
+    propertyArray.push(obj[prop])
+  }
+  return [keyArray, propertyArray];
+}
+
+
 ```
