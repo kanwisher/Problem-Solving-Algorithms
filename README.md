@@ -532,4 +532,113 @@ function sc(floor) {
   return SCREAM;
 }
 
+How many bees are in the beehive?
+
+bees can be facing UP, DOWN, LEFT, or RIGHT
+bees can share parts of other bees
+Examples
+
+Ex1
+
+bee.bee     
+.e..e..
+.b..eeb
+Answer: 5
+
+Ex2
+bee.bee     
+e.e.e.e
+eeb.eeb
+Answer: 8
+
+Notes
+
+The hive may be empty or null
+Python: the hive is passed as a list of lists (not a list of strings)
+FUNDAMENTALS
+
+My solution: (definitely my most time consuming algo to date)
+
+
+howManyBees = function(hive) {
+  let hiveCount = 0;  
+  
+  
+  if(hive === null || hive.length === 0){
+    return 0;
+  }  
+  
+
+  for(let i = 0; i < hive.length; i++){ //horizontal test
+    
+    for(let j = 0; j < hive[i].length - 2; j++){
+    
+      let horizontalTest = hive[i].slice(j, j + 3).join("");
+      
+      console.log("horizontalTest results: " + horizontalTest);
+
+      
+   
+     
+       if(horizontalTest === "eeb" || horizontalTest === "bee"){
+                hiveCount++
+                console.log(hiveCount);
+              }
+    }
+  }
+    
+    for(let i = 0; i < hive[0].length; i++){
+         let verticalTest = "";
+          for(let j = 0; j < hive.length; j++){
+            verticalTest += hive[j][i];              
+             
+          } 
+          tester(verticalTest);
+    }
+    
+    function tester(value){
+            for(i = 0; i < value.length - 2; i++){
+            let hereWeGo = value.substr(i, 3);
+            
+            console.log(hereWeGo);
+            
+             if(hereWeGo === "eeb" || hereWeGo === "bee"){
+                hiveCount++
+                console.log(hiveCount);
+              }
+            }
+      }
+      
+          
+ return hiveCount;
+  
+  
+  Eloquent solution: (not my own)
+  
+  howManyBees = function(hive) {
+    if(!hive){
+        return 0;
+    }
+    var count = 0;
+    for(var i=0;i<hive.length;i++){
+        for(var j=0;j<hive[i].length;j++){
+            if(hive[i][j] === "b"){
+                if(hive[i-2] && hive[i-1][j] === "e" && hive[i-2][j] === "e"){
+                    count++;
+                }
+                if(hive[i][j+1] === "e" && hive[i][j+2] === "e"){
+                    count++;
+                }
+                if(hive[i+2] && hive[i+1][j] === "e" && hive[i+2][j] === "e"){
+                    count++;
+                }
+                if(hive[i][j-1] === "e" && hive[i][j-2] === "e"){
+                    count++;
+                }
+            }
+        }
+    }
+    return count;
+}
+}
 ```
