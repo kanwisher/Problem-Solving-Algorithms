@@ -657,5 +657,18 @@ Examples
 Gotchas
 No intentional gotchas.
 
-My solution:
+My solution: (almost stumped on this one)
+
+function mergeArrays(a, b) {
+  let finalArray = [];  
+  for(let i = 0; i < a.length || i < b.length; i++){
+    if(a[i]){
+      finalArray.push(a[i])
+    }
+    if(b[i]){
+      finalArray.push(b[i])
+    }    
+  }  
+  return finalArray;
+}
 ```
