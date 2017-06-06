@@ -641,4 +641,21 @@ howManyBees = function(hive) {
     return count;
 }
 }
+
+Merge Two Arrays
+Created by Matt in JavaScripton February 12th 2017
+arraysformattingloops
+Create a function that takes two arrays and combines them by alternatingly taking elements from each array in turn.
+Rules
+The arrays may be of different lengths, with at least one character / digit.
+The first array will contain string characters (lowercase, a-z),
+The second array will contain integers (all positive).
+Examples
+["a", "b", "c", "d", "e"], [1, 2, 3, 4, 5] =>  ["a", 1, "b", 2, "c", 3, "d", 4, "e", 5]
+[1, 2, 3], ["a", "b", "c", "d", "e", "f"] => [1, "a", 2, "b", 3, "c", "d", "e", "f"]
+["f", "d", "w", "t"], [5, 3, 7, 8] => ["f", 5, "d", 3, "w", 7, "t", 8]
+Gotchas
+No intentional gotchas.
+
+My solution:
 ```
