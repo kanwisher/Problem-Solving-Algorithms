@@ -684,4 +684,15 @@ Gotchas
 Watch out for negative integers.
 
 My solution: 
+function findLargestNums(arr) {
+  let sortedArray = [];
+  arr.map(function(currentArray){
+    let currentSort = currentArray
+                      .sort(function(a, b) {
+                      return b - a		
+                      })
+    sortedArray.push(currentSort[0]);
+  });
+  return sortedArray;                          
+}
 ```
