@@ -695,4 +695,11 @@ function findLargestNums(arr) {
   });
   return sortedArray;                          
 }
+
+My one-liner solution: 
+function findLargestNums(arr) {
+	return arr.map((x) => Math.max(...x));            
+}
+
+
 ```
