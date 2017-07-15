@@ -720,3 +720,25 @@ Is case sensitive.
 
 My solution:
 ```
+
+
+
+
+
+Problem: reverse array in place;
+solution:
+
+function reverseArrayInPlace(arrayValue){
+  	var length = arrayValue.length;
+	for(var i = 0; i < (length - 1) / 2; i++){
+    	var temp = arrayValue[length - 1 - i];
+      	arrayValue[length - 1 - i] = arrayValue[i];
+      	arrayValue[i] = temp;     	
+    }
+}
+
+
+var arrayValue = [1, 2, 3, 4];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
