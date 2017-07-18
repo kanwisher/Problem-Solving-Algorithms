@@ -768,3 +768,35 @@ console.log(prepend(10, prepend(20, null)));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(nth({value: 10, rest: {value: 20, rest: null}}, 1));
 // → 20
+
+// Your code here.
+function deepEqual(obj1, obj2){
+  
+if (obj1 === obj2){
+ return true;
+}
+  
+  if(typeof obj1 !== "object" || typeof obj2 !=="object"|| obj1 == null || obj2 == null){
+    return false;
+  }
+  if(Object.keys(obj1).length !== Object.keys(obj2).length){
+  	return false;
+  }
+  for(key in obj1){
+    if(!(key in obj2)){
+      return false;
+    }
+    if(!deepEqual(obj1[key], obj2[key])){
+    	return false;
+  	}
+  }
+  
+  return true;
+}
+var obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 4, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
