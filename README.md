@@ -742,3 +742,29 @@ var arrayValue = [1, 2, 3, 4];
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
 // → [5, 4, 3, 2, 1]
+
+function prepend(value, list){
+return {value: value, rest: list};
+}
+
+
+
+function nth(list, idx){
+  	var value = undefined;
+  	var node = list;
+	for(i = 0; i <= idx; i++){
+       if(node === null) return undefined;
+    	value = node.value;
+      	node = node.rest
+       
+    }
+  return value;
+}
+
+
+
+
+console.log(prepend(10, prepend(20, null)));
+// → {value: 10, rest: {value: 20, rest: null}}
+console.log(nth({value: 10, rest: {value: 20, rest: null}}, 1));
+// → 20
