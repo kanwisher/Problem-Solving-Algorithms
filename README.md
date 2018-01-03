@@ -820,3 +820,47 @@ function dropElements(arr, func) {
 }
 
 dropElements([1, 2, 3], function(n) {return n < 3; });
+
+
+
+Problem:
+Smallest Common Multiple
+Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
+
+The range will be an array of two numbers that will not necessarily be in numerical order.
+
+e.g. for 1 and 3 - find the smallest common multiple of both 1 and 3 that is evenly divisible by all numbers between 1 and 3.
+
+Remember to use Read-Search-Ask if you get stuck. Try to pair program. Write your own code.
+
+Here are some helpful links:
+
+
+
+MySolution: (tough one at first for me)
+
+function smallestCommons(arr) {
+  var sortedA = arr.sort();
+  var spread = [];
+  for(var i = sortedA[0]; i <= sortedA[1]; i++){
+     spread.push(i);
+  }
+  var max = spread.pop();
+  var multiple = max;
+  
+  function isDivisible(currentValue){
+    return multiple % currentValue === 0;
+  }
+
+  
+  while(!spread.every(isDivisible)){
+
+    multiple += max;
+      
+  }
+   return multiple;
+}
+
+
+
+smallestCommons([23, 18]);
